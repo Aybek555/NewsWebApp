@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSBSVNNQ</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/3bb6ab64a2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <a class="navbar-brand" href="/">CSBSVNNQ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" action="/" method="post">
+        <input class="form-control mr-sm-2 inputSearch" name="searchbox" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn  my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+      <a href="/addnews"><button class="btn  btn-primary " type="button" name="button">Add article</button></a>
+    </div>
+  </nav>
+  <h1 class="headings">Top headings</h1>
+  <div class="parent">
+    <div class="wrapper col-lg-3">
+      <div class="newsList">
+        <% articles.forEach(function(article){%>
+        <div class="newsInfo">
+          <a href=<%=article.url%> class="newsLink">
+            <img class="newsimage" src=<%=article.urlToImage%> alt="newsimg">
+            <h5><%=article.title%></h5>
+            <p><%=article.description%></p>
+            <button class="btn btn-primary" type="submit" name="button">Read more</button>
+          </a>
+        </div>
+        <%})%>
+      </div>
+    </div>
+    <div class="wrapper col-lg-3">
+      <div class="newsList">
+        <% mongoarticles.forEach(function(article){%>
+        <div class="newsInfo">
+          <form action="/article" method="post">
+            <a href="#" class="mongo-newsLink">
+              <img class="newsimage" src=<%=article.urlToImage%> alt="newsimg">
+              <h5 class="mongoTitle"><%=article.title%></h5>
+              <p><%=article.description%></p>
+            </a>
+            <button class="btn btn-primary" type="submit" name="button" value=<%=article._id%>>Read more</button>
+          </form>
+        </div>
+        <%})%>
+      </div>
+    </div>
+    <div class="weather col-lg-3">
+      <h3> <%=city%> , <%=country%></h3>
+      <img src=<%=weatherpng%> alt="weather">
+      <h4> <%desc%> </h4>
+      <h4><%=temp%> C temperature from <%=mintemp%> to <%=maxtemp%>, wind <%=wind%> m/s.</h4>
+      <form class="form-inline  citySearchForm" action="/" method="post">
+        <input class="citySearch" type="text" name="citySearch" placeholder="Enter city name">
+        <button class="btn btn-primary citySearchBtn" type="submit" name="button">Search</button>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <p>© 2021 Copyright Aybek</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+</body>
+
+</html>

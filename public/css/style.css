@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: 'Merriweather', sans-serif;
+  background-color: #DEEDF0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #444444;
+}
+
+h5 {
+  font-size: 22px;
+  text-align: left;
+}
+
+p {
+  text-align: left;
+}
+
+footer {
+  padding-top: 10%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+h4 {
+  margin-top: 2%;
+  margin-bottom: -1%;
+}
+
+.navbar {
+  padding: 1% 15%;
+  background-color: #5db7cf;
+}
+
+.navbar-brand {
+  padding: 0 2%;
+  border-radius: 5%;
+}
+
+.headings {
+  margin-left: 15%;
+}
+
+.container {
+  padding-top: 2%;
+}
+
+.weather {
+  text-align: center;
+  padding: 2% 1%;
+}
+
+.citySearchForm {
+  padding-top: 3%;
+  padding-left: 8%;
+}
+
+.citySearch {
+  height: 36px;
+  width: 200px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 3pt 2pt rgba(0, 0, 0, 0.1);
+}
+
+.citySearch:focus {
+  box-shadow: 0 0 3pt 2pt #46a8db;
+}
+
+.citySearchBtn {
+  margin-left: 3%;
+}
+
+.parent {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.newsList {
+  padding-top: 3%;
+}
+
+.newsInfo {
+  height: 70%;
+  width: 100%;
+  margin: 10px;
+  padding: 3% 5%;
+  box-shadow: 0 0 3pt 2pt rgba(0, 0, 0, 0.1);
+}
+
+.newsimage {
+  height: 300px;
+  width: 100%;
+}
+
+.addnews {
+  margin-top: 3%;
+  text-align: center;
+}
+
+.article-title {
+  height: 36px;
+  width: 52%;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 3pt 2pt rgba(0, 0, 0, 0.1);
+}
+
+.article-title:focus {
+  box-shadow: 0 0 3pt 2pt #46a8db;
+}
+
+.article-description {
+  margin-top: 3%;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 3pt 2pt rgba(0, 0, 0, 0.1);
+}
+
+.article-description:focus {
+  box-shadow: 0 0 3pt 2pt #46a8db;
+}
+
+.article-link {
+  margin-top: 3%;
+  height: 36px;
+  width: 52%;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 3pt 2pt rgba(0, 0, 0, 0.1);
+}
+
+.article-link:focus {
+  box-shadow: 0 0 3pt 2pt #46a8db;
+}
+
+.article-btn {
+  margin: 1% 19%;
+}
+
+.updateArticle {
+  margin-top: 3%;
+  text-align: center;
+}
+
+.label {
+  font-size: 25px;
+}
+
+.updateImg {
+  width: 52%;
+}
+
+.article-link1 {
+  height: 36px;
+  width: 52%;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 3pt 2pt rgba(0, 0, 0, 0.1);
+}
+
+.article-link1:focus {
+  box-shadow: 0 0 3pt 2pt #46a8db;
+}
+
+.article-btn1 {
+  position: absolute;
+  left: 67.3%;
+}
+
+.deleteButton {
+  position: absolute;
+  left: 24%;
+}
+
+.hiddenid {
+  color: #DEEDF0;
+}
